@@ -1,0 +1,75 @@
+
+/* Flexbox and Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr;   
+    }
+    #courses{
+        padding: 5rem;
+        text-align: center;
+        grid-column: span 1;
+    }
+    #hamburger-menu {
+        display: block;
+        margin-top: -130px;
+    } 
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: royalblue;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
