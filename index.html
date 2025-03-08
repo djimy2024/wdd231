@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/course.css">
+  
     <link rel="stylesheet" href="styles/course-large.css">
     <script src="scripts/course.js" defer></script>
 </head>
@@ -26,18 +27,19 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-            </div>
-          
+            </div>    
     </header>
-    <ul class="nav-links">    
-        <li><a href="#home">Home</a></li>
-        <li><a href="#chamber">Chamber</a></li>
-        <li><a href="https://github.com/settings/profile">GitHub Profile</a></li>
-        <li><a href="https://www.linkedin.com/in/djimy-francillon-ba401b144/">LinkedIn</a></li>
-    </ul>
-</nav>
- <!-- Main -->
-    <main>
+
+    <nav>
+        <ul class="nav-links">    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="https://github.com/settings/profile" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/djimy-francillon-ba401b144/" target="_blank">LinkedIn</a></li>    
+        </ul>
+      </nav>
+      <!-- Main -->
+      <main>
         <section id="home">
             <h1 id="">Course Work</h1>
             <p>Welcome to my personal home page.<br> Here you'll find information about my courses, professional links, and more.</p>
@@ -46,15 +48,17 @@
             <h2 id="country-h2">Citadelle, Haiti</h2>
             <img src="images/Citadelle_Laferrière.webp" alt="Citadelle" id="Citadelle" width="410">
         </section>
-            <section id="courses">
+
+        <section id="courses">
             <h2 id="courses-h2">Web and Computer Programming Certificate</h2>
-            <div id="course-filter">
-                <button onclick="filterCourses('all')">All Courses</button>
-                <button onclick="filterCourses('wdd')">WDD Courses</button>
-                <button onclick="filterCourses('cse')">CSE Courses</button>
-            </div>
-            <ul id="course-list"></ul>
+          <button onclick="displayAllCourses()">Show All Courses</button>
+          <button onclick="displayWDDCourses()">WDD Courses</button>
+          <button onclick="displayCSECourses()">CSE Courses</button>
+          <ul id="course-list"></ul>
+          <p>Total Credits: <span id="total-credits"></span></p>
         </section>
+    
+ 
     </main>
         <!-- Footer -->
     <footer>
@@ -63,3 +67,4 @@
     </footer>
     </body>
 </html>
+
