@@ -8,7 +8,7 @@
 const courses = [
     { name: "WDD130", code: "WDD100", credits: 2, completed: true },
     { name: "WDD131", code: "CSE120", credits: 2, completed: true},
-    { name: "WDD231", code: "WDD200", credits: 2, completed: true },
+    { name: "WDD231", code: "WDD200", credits: 2, completed: false },
     { name: "CSE110", code: "CSE130", credits: 2, completed: true },
     {name: "CSE111", code: "CSE130", credits: 2, completed: true },
    {name: "CSE210", code: "CSE130", credits: 2, completed: false }
