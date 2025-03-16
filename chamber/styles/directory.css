@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      
+  }
+  
+  body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f4f4f9; /* Light background */
+      color: #333333; /* Dark text color for readability */
+      line-height: 1.6;
+      
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: rgb(70, 121, 180);
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+nav {
+    background-color: grey;
+    grid-template-rows: 0fr;
+    
+  }
+
+  nav ul {overflow: hidden;}
+
+  nav.open {grid-template-rows: 1fr;}
+
+  #myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 0.25rem 2vw;
+  }
+
+  ul.menulinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li.current-menu-item a {
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  ul.menulinks {
+    display: none;
+    list-style-type: none;
+}
+
+ul.menulinks, ul.menulinks.open {
+    justify-content: none;
+}
+
+ul.menulinks a:hover {
+ background-color: rgba(255,255,255,0.2);
+}
+
+
+ul.open.menulinks {
+ display: block;
+}
+
+#myButton.open::before {
+    content: "✖";
+}
+
+.layout-toggle {
+    margin: 20px 0;
+}
+
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.member-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #333;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+}
+
+.member-card h3 {
+    margin-top: 10px;
+}
+
+.member-card a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+/* Footer */  
+ footer{
+   background-color: rgb(70, 121, 180);
+   display: grid;
+   text-align: center;
+   color: #fff;
+   font-size: 1rem;
+   padding: 1rem;
+ }
+
+ /* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-card {
+        width: 80%;
+    }
+}

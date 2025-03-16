@@ -14,6 +14,55 @@ const courses = [
    {name: "CSE210", code: "CSE130", credits: 2, completed: false }
   ];
 
+  // Function to check screen size and create small boxes for mobile
+function checkMobileView() {
+    const courseList = document.getElementById('course-list');
+    courseList.innerHTML = '';  // Clear any existing course items
+  
+    // Check if the screen is small (mobile)
+    const isMobile = window.innerWidth <= 768;
+  
+    if (isMobile) {
+      // For mobile view, show only course names in small boxes
+      courses.forEach(course => {
+        const courseItem = document.createElement('div');
+        courseItem.classList.add('course-item', 'mobile-course-item'); // Add 'mobile-course-item' class for styling
+  
+        // Set HTML content to display only course name
+        courseItem.innerHTML = `
+          <h3 class="course-name">${course.name}</h3>
+        `;
+  
+        courseList.appendChild(courseItem);
+      });
+    } else {
+      // For larger screens, display full course details (course name, credits, and status)
+      courses.forEach(course => {
+        const courseItem = document.createElement('div');
+        courseItem.classList.add('course-item');
+  
+        // Add class based on completion status
+        if (course.completed) {
+          courseItem.classList.add('completed');
+        } else {
+          courseItem.classList.add('incomplete');
+        }
+  
+        // Set HTML content for full details
+        courseItem.innerHTML = `
+          <h3 class="course-name">${course.name}</h3>
+          <p class="credits">${course.credits} Credits</p>
+          <p class="status">${course.completed ? 'Completed' : 'Not Completed'}</p>
+        `;
+  
+        courseList.appendChild(courseItem);
+      });
+    }
+  }
+  
+  // Run the function on page load and whenever the window is resized
+  window.addEventListener('load', checkMobileView);
+  window.addEventListener('resize', checkMobileView);
 // Function to display all courses
 function displayAllCourses() {
   const courseList = document.getElementById('course-list');
