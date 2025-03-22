@@ -164,4 +164,9 @@ ul.open.menulinks {
     .member-card {
         width: 80%;
     }
+
+    *{
+      text-align: center;
+      align-items: center;
+    }
 }
