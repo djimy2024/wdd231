@@ -35,7 +35,14 @@
         </ul>
       </nav>
 <!-- Main -->
-<h1>OpenWeatherMap.org API Test</h1>
+
+<section id="hero">
+  <h1>Welcome to the Citadelle commerce website</h1>
+<div><a href="directory.html" class="cta-button">Join Now</a></div>
+  <img src="images/logo.png" alt="Chamber of Commerce" width="350">
+</section>
+
+<h1>Weather and Events</h1>
 <main>
     <input type="text" id="city" placeholder="Enter city name" />
     <button onclick="getWeather()">Get Weather</button>
@@ -46,11 +53,17 @@
         <p id="description"></p>
         <p id="humidity"></p>
     </div>
+
     <figure>
         <img id="weather-icon" src="images/10d@2x.png" alt="Weather Icon">
         <figcaption></figcaption>
     </figure>
 
+    <section id="events">
+      <button onclick="findEvents()">Find Events</button>
+      <ul id="eventList"></ul>
+  </section>
+   
           <section id="spotlights">
             <h2>Chamber Member Spotlights</h2>
             <div class="spotlight-card">

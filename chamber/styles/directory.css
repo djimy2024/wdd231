@@ -146,7 +146,9 @@ ul.open.menulinks {
     border: 1px solid #ddd;
    
   }
-
+.weatherData{
+  text-align: center;
+}
   
 
  /* Responsive design for smaller screens */
