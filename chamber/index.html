@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of local Chamber of Commerce of Citadelle">
+    <meta name="author" content="Djimy Francillon">
+    <meta property="og:title" content="Chamber of Commerce of Citadelle">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Home-icon.png"> 
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <title>Home page welcome</title>
+    <link rel="icon" href="images/Home-icon.png "> 
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" width="34" height="40">
+       <span>Home page welcome</span>
+       <button id="myButton">&#9776;</button>
+      </header>
+      <nav>
+        <ul class="menulinks">
+        <li class="current-menu-item"><a href="#" title="Home">Home</a></li>
+        <li><a href="#">Commerce</a></li>
+        <li><a href="#" title="Service">About-Us</a></li>
+        <li><a href="#" title="History">Contact-Us</a></li>
+        </ul>
+      </nav>
+<!-- Main -->
+<h1>OpenWeatherMap.org API Test</h1>
+<main>
+    <input type="text" id="city" placeholder="Enter city name" />
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weatherData">
+        <p id="cityName"></p>
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="humidity"></p>
+    </div>
+    <figure>
+        <img id="weather-icon" src="images/10d@2x.png" alt="Weather Icon">
+        <figcaption></figcaption>
+    </figure>
+
+          <section id="spotlights">
+            <h2>Chamber Member Spotlights</h2>
+            <div class="spotlight-card">
+             
+              <div class="layout-toggle">
+                <button id="gridView">Grid View</button>
+                <button id="listView">List View</button>
+            </div>
+        
+            <section id="members"></section>
+          
+          </section>     
+          
+    </main>
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Djimy Francillon | OpenWeatherMap.org | CC BY-SA 4.0</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

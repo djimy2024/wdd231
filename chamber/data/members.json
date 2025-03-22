@@ -6,7 +6,7 @@
         "phone": "(123) 456-7890",
         "website": "https://companyone.com",
         "image": "company1.jpg",
-        "membership_level": 1
+        "membership_level": "silver"
     },
     {
         "name": "Company Two",
@@ -14,7 +14,7 @@
         "phone": "(234) 567-8901",
         "website": "https://companytwo.com",
         "image": "company2.jpg",
-        "membership_level": 2
+        "membership_level": "Gold"
     },
     {
         "name": "Company Three",
@@ -22,7 +22,7 @@
         "phone": "(345) 678-9012",
         "website": "https://companythree.com",
         "image": "company3.jpg",
-        "membership_level": 3
+        "membership_level": "Silver"
     },
     {
         "name": "Company Four",
@@ -30,7 +30,7 @@
         "phone": "(456) 789-0123",
         "website": "https://companyfour.com",
         "image": "company4.jpg",
-        "membership_level": 1
+        "membership_level": "Silver"
     },
     {
         "name": "Company Five",
@@ -38,7 +38,7 @@
         "phone": "(567) 890-1234",
         "website": "https://companyfive.com",
         "image": "company5.jpg",
-        "membership_level": 2
+        "membership_level": "Gold"
     },
     {
         "name": "Company Six",
@@ -46,7 +46,7 @@
         "phone": "(678) 901-2345",
         "website": "https://companysix.com",
         "image": "company6.jpg",
-        "membership_level": 3
+        "membership_level": "Gold"
     },
     {
         "name": "Company Seven",
@@ -54,6 +54,6 @@
         "phone": "(789) 012-3456",
         "website": "https://companyseven.com",
         "image": "company7.jpg",
-        "membership_level": 1
+        "membership_level": "Silver"
     }
 ]

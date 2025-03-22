@@ -129,12 +129,35 @@ ul.open.menulinks {
    padding: 1rem;
  }
 
+ #hero {
+    text-align: center;
+  }
+  
+  #events ul {
+    list-style-type: none;
+  }
+  
+  #spotlights .spotlight-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+   
+  }
+
+  
+
  /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     #members {
         flex-direction: column;
         align-items: center;
     }
+    header, footer {
+        text-align: center;
+      }
 
     .member-card {
         width: 80%;
