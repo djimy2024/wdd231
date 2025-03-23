@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
+    align-items: center;
       
   }
   
@@ -146,10 +148,31 @@ ul.open.menulinks {
     border: 1px solid #ddd;
    
   }
-.weatherData{
-  text-align: center;
+
+/* Current Event Section */
+.current-events {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 30px #333;
 }
-  
+
+/* Weather Section */
+.weather {
+  background-color: #e0f7fa;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 0 30px #333;
+}
+
+.weather p {
+  text-align: center;
+  font-size: 1.2rem;
+}
 
  /* Responsive design for smaller screens */
 @media (max-width: 768px) {

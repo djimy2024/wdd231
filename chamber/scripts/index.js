@@ -12,111 +12,106 @@ hamburgerElement.addEventListener('click', () =>{
    hamburgerElement.classList.toggle('open');
 });
 
-const apiKey = "6f3b19857e9137b436f8b8a80044b24a"; 
+  // My OpenWeatherMap API key from https://openweathermap.org/api
+const apiKey = '6f3b19857e9137b436f8b8a80044b24a';  // My API key
+const city = 'Citadelle';  // My city
 
-// Fetch weather data
-function getWeather() {
-    const city = document.getElementById("city").value;
-    if (!city) {
-        alert("Please enter a city name");
-        return;
+// Fetch current weather and 3-day forecast
+const fetchWeather = async () => {
+    try {
+        // Current weather data
+        const currentWeatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+        const currentWeatherData = await currentWeatherResponse.json();
+        
+        // Forecast data (3-day forecast)
+        const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&cnt=3`);
+        const forecastData = await forecastResponse.json();
+
+        // Current weather info
+        const weatherDiv = document.getElementById('weather-info');
+        weatherDiv.innerHTML = `
+            <p>Current Temperature: ${currentWeatherData.main.temp}°C</p>
+            <p>Weather: ${currentWeatherData.weather[0].description}</p>
+        `;
+        
+        // 3-day forecast info
+        const forecastDiv = document.getElementById('forecast-info');
+        forecastDiv.innerHTML = forecastData.list.map(day => `
+            <div class="forecast-day">
+                <p><strong>${new Date(day.dt * 1000).toLocaleDateString()}</strong></p>
+                <p>Temp: ${day.main.temp}°C</p>
+                <p>Weather: ${day.weather[0].description}</p>
+            </div>
+        `).join('');
+        
+    } catch (error) {
+        document.getElementById('weather-info').innerHTML = `<p>Failed to load weather data.</p>`;
+        document.getElementById('forecast-info').innerHTML = `<p>Failed to load forecast data.</p>`;
     }
+};
 
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+// Call fetchWeather to load data on page load
+document.addEventListener("DOMContentLoaded", function () {
+    fetchWeather();
+});
 
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (data.cod !== 200) {
-                alert("City not found");
-                return;
-            }
-
-            const cityName = data.name;
-            const temp = data.main.temp;
-            const description = data.weather[0].description;
-            const humidity = data.main.humidity;
-
-            document.getElementById("cityName").innerText = `City: ${cityName}`;
-            document.getElementById("temperature").innerText = `Temperature: ${temp}°C`;
-            document.getElementById("description").innerText = `Condition: ${description}`;
-            document.getElementById("humidity").innerText = `Humidity: ${humidity}%`;
-        })
-        .catch(error => {
-            console.error("Error fetching weather data:", error);
-        });
-}
-
-// Fetch events data
-function getEvents() {
-    fetch(eventApiUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (!data || data.length === 0) {
-                alert("No events found");
-                return;
-            }
-
-            const eventsList = document.getElementById("eventsList");
-            eventsList.innerHTML = ""; // Clear the list before adding new data
-
-            data.forEach(event => {
-                const li = document.createElement("li");
-                li.innerText = `${event.name} - ${event.date}, ${event.location}`;
-                eventsList.appendChild(li);
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching events data:", error);
-        });
-}
-
-// Call getEvents when the page loads
-window.onload = getEvents;
 async function fetchMembers() {
-  const response = await fetch('data/members.json');
-  const members = await response.json();
+   const response = await fetch('data/members.json');
+   const members = await response.json();
+ 
+   // Log the members to the console
+   console.log(members);
+ 
+   const shuffledMembers = shuffleArray(members).slice(0, 3);
+     
+   displayMembers(shuffledMembers);
+ }
+ 
+ // Fisher-Yates shuffle algorithm
+ function shuffleArray(array) {
+     for (let i = array.length - 1; i > 0; i--) {
+         const j = Math.floor(Math.random() * (i + 1));
+         [array[i], array[j]] = [array[j], array[i]];  // Swap elements
+     }
+     return array;
+ }
+ function displayMembers(members) {
+   const membersContainer = document.getElementById('members');
+   membersContainer.innerHTML = '';  // Clear the container
+ 
+   members.forEach(member => {
+       const memberCard = document.createElement('div');
+       memberCard.classList.add('member-card');
+       memberCard.innerHTML = `
+           <img src="images/${member.image}" alt="${member.membership_level}">
+           <h3>${member.name}</h3>
+           <p>${member.address}</p>
+           <p>${member.phone}</p>
+           <a href="${member.website}" target="_blank">Visit Website</a>`;
+       membersContainer.appendChild(memberCard);
+   });
+ }
+ 
+ document.getElementById('gridView').addEventListener('click', () => {
+   document.getElementById('members').style.display = 'flex';  // Grid View
+ });
+ 
+ window.onload = fetchMembers;
 
-  // Log the members to the console
-  console.log(members);
+ const fetchEvents = async () => {
+  const events = [
+      { title: "Spring Sale", date: "April 10, 2025", description: "Discounts up to 50%!" },
+      { title: "Summer Carnival", date: "June 15, 2025", description: "Join us for food, music, and fun." }
+  ];
 
-  const shuffledMembers = shuffleArray(members).slice(0, 3);
-    
-  displayMembers(shuffledMembers);
-}
+  const eventListDiv = document.getElementById('event-list');
+  eventListDiv.innerHTML = events.map(event => `
+      <div class="event">
+          <h3>${event.title}</h3>
+          <p><strong>Date:</strong> ${event.date}</p>
+          <p><strong>Description:</strong> ${event.description}</p>
+      </div>
+  `).join('');
+};
 
-// Fisher-Yates shuffle algorithm
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];  // Swap elements
-    }
-    return array;
-}
-function displayMembers(members) {
-  const membersContainer = document.getElementById('members');
-  membersContainer.innerHTML = '';  // Clear the container
-
-  members.forEach(member => {
-      const memberCard = document.createElement('div');
-      memberCard.classList.add('member-card');
-      memberCard.innerHTML = `
-          <img src="images/${member.image}" alt="${member.name}">
-          <h3>${member.name}</h3>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
-      membersContainer.appendChild(memberCard);
-  });
-}
-
-document.getElementById('gridView').addEventListener('click', () => {
-  document.getElementById('members').style.display = 'flex';  // Grid View
-});
-
-document.getElementById('listView').addEventListener('click', () => {
-  document.getElementById('members').style.display = 'flex';  // List View
-});
-
-window.onload = fetchMembers;
+fetchEvents();

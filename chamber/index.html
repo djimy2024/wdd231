@@ -23,7 +23,7 @@
     <!-- Header -->
     <header>
         <img src="images/logo.png" width="34" height="40">
-       <span>Home page welcome</span>
+       <span>Welcome to the Citadelle Website</span>
        <button id="myButton">&#9776;</button>
       </header>
       <nav>
@@ -37,51 +37,48 @@
 <!-- Main -->
 
 <section id="hero">
-  <h1>Welcome to the Citadelle commerce website</h1>
+  <h1>Home Page</h1>
 <div><a href="directory.html" class="cta-button">Join Now</a></div>
   <img src="images/logo.png" alt="Chamber of Commerce" width="350">
 </section>
 
-<h1>Weather and Events</h1>
+<h1>Events and Weather</h1>
 <main>
-    <input type="text" id="city" placeholder="Enter city name" />
-    <button onclick="getWeather()">Get Weather</button>
+    <!-- Current Event Section -->
+<section id="current-events" class="current-events">
+  <h2>Current Events</h2>
+  <div id="event-list">
+      <p>Loading current events...</p>
+  </div>
+</section>
 
-    <div id="weatherData">
-        <p id="cityName"></p>
-        <p id="temperature"></p>
-        <p id="description"></p>
-        <p id="humidity"></p>
-    </div>
+<!-- Weather Section -->
+<section id="weather" class="weather">
+  <h2>Today's Weather</h2>
+  <div id="weather-info">
+      <p>Loading weather data...</p>
+  </div>
+  <h3>3-Day Forecast</h3>
+  <div id="forecast-info">
+      <p>Loading forecast data...</p>
+  </div>
+</section>
 
-    <figure>
-        <img id="weather-icon" src="images/10d@2x.png" alt="Weather Icon">
-        <figcaption></figcaption>
-    </figure>
+<!-- Membership Section -->
+<section id="spotlights">
+  <h2>Chamber Member Spotlights</h2>
+  <div class="spotlight-card">
+    <div class="layout-toggle">
+      <button id="gridView">Grid View</button>   
+  </div>
 
-    <section id="events">
-      <button onclick="findEvents()">Find Events</button>
-      <ul id="eventList"></ul>
-  </section>
-   
-          <section id="spotlights">
-            <h2>Chamber Member Spotlights</h2>
-            <div class="spotlight-card">
-             
-              <div class="layout-toggle">
-                <button id="gridView">Grid View</button>
-                <button id="listView">List View</button>
-            </div>
-        
-            <section id="members"></section>
-          
-          </section>     
+  <section id="members"></section>
           
     </main>
 
 <!-- Footer -->
     <footer>
-        <p>&copy; <span id="currentyear"></span> Djimy Francillon | OpenWeatherMap.org | CC BY-SA 4.0</p>
+        <p>&copy; <span id="currentyear"></span> Djimy Francillon | OpenWeatherMap.org | WDD 231</p>
         <p id="lastModified"></p>
     </footer>
 </body>
