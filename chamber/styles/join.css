@@ -7,6 +7,10 @@ width: 100%;
 
 }
 
+* :not(nav) {
+    width: -100%; /* Only apply negative padding to other elements except the header */
+}
+
 main {
     text-align: center;
     align-items: center;
@@ -144,7 +148,7 @@ width: 100%;
 nav {
     background-color: grey;
     grid-template-rows: 0fr;
-    width: 100%;
+    
     
     }
     

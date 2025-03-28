@@ -15,4 +15,8 @@
   nav {
     grid-template-rows: 1fr;
    }
+
+   nav {
+    display: block; /* Show the nav on screens 768px and larger */
+}
 }
