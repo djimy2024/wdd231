@@ -1,14 +1,8 @@
 
 * {
 margin: 0;
-padding: -150px;
 box-sizing: border-box;
 width: 100%;
-
-}
-
-* :not(nav) {
-    width: -100%; /* Only apply negative padding to other elements except the header */
 }
 
 main {
@@ -132,23 +126,23 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+/* Header and Footer Styling */
 header {
-display: grid;
-grid-template-columns: 44px auto 44px;
-align-items: end;
-background-color: rgb(70, 121, 180);
-justify-content: space-around;
-color: white;
-text-align: center;
-font-size: 1.5rem;
-padding: 1rem;
-width: 100%;
-}
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: rgb(70, 121, 180);
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    }
 
 nav {
     background-color: grey;
     grid-template-rows: 0fr;
-    
     
     }
     
