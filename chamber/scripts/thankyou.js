@@ -11,6 +11,7 @@
      navElement.classList.toggle('open');
      hamburgerElement.classList.toggle('open');
  });
+
 // Function to get query parameters from the URL
 function getQueryParams() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -18,10 +19,10 @@ function getQueryParams() {
     const lastName = urlParams.get('last-name');
     const organizationalTitle = urlParams.get('organizational-title');
     const email = urlParams.get('email');
-    const PhoneNumber = urlParams.get('Phone-number');
+    const phoneNumber = urlParams.get('phone');  
     const business = urlParams.get('business');
-    const membershipLevel = urlParams.get('membership-level');
-    return { firstName, lastName, organizationalTitle, email, PhoneNumber, business, membershipLevel};
+    const membershipLevel = urlParams.get('membership-level');  
+    return { firstName, lastName, organizationalTitle, email, phoneNumber, business, membershipLevel };
 }
 
 // Function to display form data
@@ -35,7 +36,7 @@ function displayFormData() {
         <p><strong>Last Name:</strong> ${data.lastName}</p>
         <p><strong>Organizational Title:</strong> ${data.organizationalTitle}</p>
         <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone Number:</strong> ${data.PhoneNumber}</p>
+        <p><strong>Phone Number:</strong> ${data.phoneNumber}</p>
         <p><strong>Business/Organization's Name:</strong> ${data.business}</p>
         <p><strong>Membership Level:</strong> ${data.membershipLevel}</p>
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
@@ -44,4 +45,3 @@ function displayFormData() {
 
 // Call the function to display form data
 displayFormData();
-
