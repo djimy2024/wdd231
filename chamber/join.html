@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of local Chamber of Commerce of Citadelle">
+    <meta name="author" content="Djimy Francillon">
+    <meta property="og:title" content="Chamber of Commerce of Citadelle">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Home-icon.png"> 
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <title>Home page welcome</title>
+    <link rel="icon" href="images/Home-icon.png "> 
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="/chamber/styles/directory-large.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" width="34" height="40">
+       <span>Welcome to the Citadelle Website</span>
+       <button id="myButton">&#9776;</button>
+      </header>
+      <nav>
+        <ul class="menulinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="thankyou.html">Contact</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+<!-- Main -->
+ <main>
+
+<div class="form-container">
+    <h2>Join Our Membership</h2>
+    <form action="thankyou.html" method="get">
+        <!-- First Name -->
+        <label for="first-name">First Name:
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="First Name" placeholder="Djimy">
+        </label>
+
+        <!-- Last Name -->
+        <label for="last-name">Last Name:
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Last Name" placeholder="Francillon">
+        </label>
+
+         <!-- Organizational Title -->
+         <label for="organizational-title">Organizational Title:
+            <input type="text" id="organizational-title" name="organizational-title" required autocomplete="organization-name" title="Organizational Title" placeholder="NATCOM S.A">
+        </label>
+
+        <!-- Email -->
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required autocomplete="email" title="Email" placeholder="djimyf@gmail.com">
+        </label>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:
+            <input type="phone" id="phone" name="phone" required autocomplete="phone" title="Phone" placeholder="+509 4111-0050">
+        </label>
+
+         <!-- Business -->
+         <label for="business">Business/Organization's Name:
+            <input type="business" id="business" name="business" required autocomplete="business" title="Business" placeholder="Pwabouyi">
+        </label>
+
+          <!-- Level -->
+          <label for="business">Membership Level:
+            <input type="level" id="level" name="level" required autocomplete="level" title="Level" placeholder="Gold Membership">
+        </label>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</div>
+
+<!-- Cards Section -->
+<div class="card-container">
+    <div class="card" id="card1">
+        <h3>NP Membership</h3>
+        <p>No Fee</p>
+        <button onclick="openModal('modal1')">Learn More</button>
+    </div>
+    <div class="card" id="card2">
+        <h3>Bronze Membership</h3>
+        <p>$100/year</p>
+        <button onclick="openModal('modal2')">Learn More</button>
+    </div>
+    <div class="card" id="card3">
+        <h3>Silver Membership</h3>
+        <p>$250/year</p>
+        <button onclick="openModal('modal3')">Learn More</button>
+    </div>
+    <div class="card" id="card4">
+        <h3>Gold Membership</h3>
+        <p>$500/year</p>
+        <button onclick="openModal('modal4')">Learn More</button>
+    </div>
+</div>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Special events, advertising, and networking opportunities at no cost!</p>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Special events, limited advertising, and networking opportunities for $100/year.</p>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Special events, priority advertising, and event discounts for $250/year.</p>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>Special events, premium advertising, and exclusive benefits for $500/year.</p>
+    </div>
+</div>
+    </main>
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Djimy Francillon | WDD 231</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

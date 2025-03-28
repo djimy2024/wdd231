@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Grocery Store - Contact</title>
+  <link rel="stylesheet" href="styles/test.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="thank-you-message" style="display: none;">
+      <h3>Thank you for reaching out! We will get back to you soon.</h3>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Organic Grocery Store | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('contactForm');
+  const thankYouMessage = document.getElementById('thank-you-message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    // Show a confirmation message and hide the form
+    thankYouMessage.style.display = 'block';
+    form.reset(); // Reset the form fields
+
+    // You could also store the form data in localStorage or send it to a server here
+    console.log(`Form submitted: ${name}, ${email}, ${message}`);
+  });
+});
+
+  </script>
+</body>
+</html>

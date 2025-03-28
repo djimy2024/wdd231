@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "name": "Organic Apples",
+      "description": "Fresh, sweet organic apples grown locally. Ideal for snacking or baking.",
+      "price": "$5.99",
+      "category": "Fruit",
+      "image": "apple.jpg",
+      "availability": "In Stock",
+      "rating": 4.5,
+      "features": [
+        "Rich in Vitamin C",
+        "Non-GMO",
+        "Locally sourced"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Organic Carrots",
+      "description": "Crisp and nutritious organic carrots. Great for salads or stews.",
+      "price": "$3.49",
+      "category": "Vegetables",
+      "image": "carrot.jpg",
+      "availability": "In Stock",
+      "rating": 4.7,
+      "features": [
+        "High in Beta-carotene",
+        "Non-GMO",
+        "No pesticides"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Organic Bananas",
+      "description": "Sweet and fresh organic bananas. Perfect for smoothies or a healthy snack.",
+      "price": "$4.99",
+      "category": "Fruit",
+      "image": "banana.jpg",
+      "availability": "Out of Stock",
+      "rating": 4.3,
+      "features": [
+        "Rich in Potassium",
+        "Non-GMO",
+        "Fair Trade Certified"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Organic Spinach",
+      "description": "Fresh organic spinach, great for salads, smoothies, or cooking.",
+      "price": "$2.99",
+      "category": "Vegetables",
+      "image": "spinach.jpg",
+      "availability": "In Stock",
+      "rating": 4.8,
+      "features": [
+        "High in Iron",
+        "Non-GMO",
+        "Locally sourced"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Organic Almond Butter",
+      "description": "Creamy and smooth organic almond butter, perfect for spreads or snacks.",
+      "price": "$7.99",
+      "category": "Pantry",
+      "image": "almond-butter.jpg",
+      "availability": "In Stock",
+      "rating": 4.9,
+      "features": [
+        "No added sugar",
+        "Non-GMO",
+        "Rich in healthy fats"
+      ]
+    }
+  ]
+  
