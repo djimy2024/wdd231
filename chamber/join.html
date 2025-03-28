@@ -22,7 +22,7 @@
 <body>
     <!-- Header -->
     <header>
-        <img src="images/logo.png" width="34" height="40">
+        <img src="images/logo.png" width="34" height="40" alt="Website Logo">
        <span>Welcome to the Citadelle Website</span>
        <button id="myButton">&#9776;</button>
       </header>
@@ -51,8 +51,8 @@
         </label>
 
          <!-- Organizational Title -->
-         <label for="organizational-title">Organizational Title:
-            <input type="text" id="organizational-title" name="organizational-title" required autocomplete="organization-name" title="Organizational Title" placeholder="NATCOM S.A">
+         <label for="organizational">Organizational Title:
+            <input type="text" id="organizational-title" name="organizational-title" required autocomplete="organization" title="Organizational Title" placeholder="NATCOM">
         </label>
 
         <!-- Email -->
@@ -62,17 +62,23 @@
 
         <!-- Phone Number -->
         <label for="phone">Phone Number:
-            <input type="phone" id="phone" name="phone" required autocomplete="phone" title="Phone" placeholder="+509 4111-0050">
+            <input type="tel" id="phone" name="phone" title="Phone">
         </label>
 
          <!-- Business -->
          <label for="business">Business/Organization's Name:
-            <input type="business" id="business" name="business" required autocomplete="business" title="Business" placeholder="Pwabouyi">
+            <input type="text" id="business" name="business" title="Business">
+
         </label>
 
           <!-- Level -->
           <label for="business">Membership Level:
-            <input type="level" id="level" name="level" required autocomplete="level" title="Level" placeholder="Gold Membership">
+            <select id="level" name="level" required autocomplete="off" title="Level">
+                <option value="np">NP Membership (Non-Profit)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
         </label>
 
         <!-- Submit Button -->
