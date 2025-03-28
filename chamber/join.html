@@ -41,45 +41,45 @@
     <h2>Join Our Membership</h2>
     <form action="thankyou.html" method="get">
         <!-- First Name -->
-        <label for="first-name">First Name:
+        <label for="first-name">First Name
             <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="First Name" placeholder="Djimy">
         </label>
 
         <!-- Last Name -->
-        <label for="last-name">Last Name:
+        <label for="last-name">Last Name
             <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Last Name" placeholder="Francillon">
         </label>
 
          <!-- Organizational Title -->
-         <label for="organizational">Organizational Title:
-            <input type="text" id="organizational-title" name="organizational-title" required autocomplete="organization" title="Organizational Title" placeholder="NATCOM">
-        </label>
+         <label for="organizational">Organizational Title</label>
+            <input type="text" id="organizational-title" name="organizational-title" required autocomplete="organization" title="Organizational Title">
+        
 
         <!-- Email -->
-        <label for="email">Email:
+        <label for="email">Email
             <input type="email" id="email" name="email" required autocomplete="email" title="Email" placeholder="djimyf@gmail.com">
         </label>
 
         <!-- Phone Number -->
-        <label for="phone">Phone Number:
+        <label for="phone">Phone Number
             <input type="tel" id="phone" name="phone" title="Phone">
         </label>
 
          <!-- Business -->
-         <label for="business">Business/Organization's Name:
+         <label for="business">Business/Organization's Name
             <input type="text" id="business" name="business" title="Business">
 
         </label>
 
           <!-- Level -->
-          <label for="business">Membership Level:
-            <select id="level" name="level" required autocomplete="off" title="Level">
-                <option value="np">NP Membership (Non-Profit)</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-              </select>
-        </label>
+          <select id="level" name="level" required autocomplete="off" title="Level">
+            <option value="" disabled selected>Select a Membership Level</option> <!-- Placeholder option -->
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        
 
         <!-- Submit Button -->
         <input type="submit" value="Submit Application">
