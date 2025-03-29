@@ -9,26 +9,12 @@
   }
   
   header {
-    background-color: #2c3e50;
+    background-color: #2C6F2A;
     padding: 10px;
+    text-align: center;
   }
   
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
+ 
   .hero {
     text-align: center;
     background-color: #f39c12;
@@ -41,7 +27,7 @@
   }
   
   .cta-button {
-    background-color: #27ae60;
+    background-color: #f39c12;
     color: white;
     padding: 15px 25px;
     text-decoration: none;
@@ -85,9 +71,46 @@
     cursor: pointer;
     margin-top: 10px;
   }
+
+  ul.menulinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li.current-menu-item a {
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  ul.menulinks {
+    display: none;
+    list-style-type: none;
+}
+
+ul.menulinks, ul.menulinks.open {
+    justify-content: none;
+}
+
+ul.menulinks a:hover {
+ background-color: rgba(255,255,255,0.2);
+}
+
+
+ul.open.menulinks {
+ display: block;
+}
+
+#myButton.open::before {
+    content: "✖";
+}
+
+.layout-toggle {
+    margin: 20px 0;
+}
   
   footer {
-    background-color: #2c3e50;
+    background-color: #2C6F2A;
     color: white;
     text-align: center;
     padding: 10px 0;

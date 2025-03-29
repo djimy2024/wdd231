@@ -8,27 +8,27 @@
   <meta property="og:image" content="images/favicon.webp">
   <meta property="og:description" content="Order fresh, organic groceries and have them delivered to your door.">
   <title>Organic Grocery Store</title>
-  <link rel="stylesheet" href="styles/test.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="icon" href="images/favicon.webp" />
  
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+    <img src="images/favicon.webp" width="34" height="40">
+       <span><h1>Welcome to Organic Grocery Store</h1></span>
+       <p>Your one-stop destination for fresh, organic produce delivered to your door.</p> 
+      </header>
+    
+  <nav>
+    <ul class="menulinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div><a href="product.html" class="cta-button">Shop Now</a></div>
   <main>
-    <section class="hero">
-      <h1>Welcome to Organic Grocery Store</h1>
-      <p>Your one-stop destination for fresh, organic produce delivered to your door.</p>
-      <a href="product.html" class="cta-button">Shop Now</a>
-    </section>
+   
 
     <section class="featured-products">
       <h2>Featured Products</h2>
@@ -54,16 +54,5 @@
     <p>&copy; 2025 Organic Grocery Store | All Rights Reserved</p>
   </footer>
 
-  <script >
-    document.addEventListener("DOMContentLoaded", function() {
-  const detailsButtons = document.querySelectorAll('.details-button');
-  detailsButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      alert("More details coming soon!");
-    });
-  });
-});
-
-  </script>
 </body>
 </html>

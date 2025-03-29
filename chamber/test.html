@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+   
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" width="34" height="40">
+       <span>Welcome to the Citadelle Website</span>
+       <button id="myButton">&#9776;</button>
+      </header>
+      <nav>
+        <ul class="menulinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Join Our Membership</h2>
+        <form action="thankyou.html" method="get">
+            <!-- First Name -->
+            <label for="first-name">First Name:
+                <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="First Name" placeholder="John">
+            </label>
+
+            <!-- Last Name -->
+            <label for="last-name">Last Name:
+                <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Last Name" placeholder="Doe">
+            </label>
+
+            <!-- Email -->
+            <label for="email">Email:
+                <input type="email" id="email" name="email" required autocomplete="email" title="Email" placeholder="example@example.com">
+            </label>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="card-container">
+        <div class="card" id="card1">
+            <h3>NP Membership</h3>
+            <p>No Fee</p>
+            <button onclick="openModal('modal1')">Learn More</button>
+        </div>
+        <div class="card" id="card2">
+            <h3>Bronze Membership</h3>
+            <p>$100/year</p>
+            <button onclick="openModal('modal2')">Learn More</button>
+        </div>
+        <div class="card" id="card3">
+            <h3>Silver Membership</h3>
+            <p>$250/year</p>
+            <button onclick="openModal('modal3')">Learn More</button>
+        </div>
+        <div class="card" id="card4">
+            <h3>Gold Membership</h3>
+            <p>$500/year</p>
+            <button onclick="openModal('modal4')">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <p>Special events, advertising, and networking opportunities at no cost!</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <p>Special events, limited advertising, and networking opportunities for $100/year.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <p>Special events, priority advertising, and event discounts for $250/year.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <p>Special events, premium advertising, and exclusive benefits for $500/year.</p>
+        </div>
+    </div>
+</body>
+</html>
