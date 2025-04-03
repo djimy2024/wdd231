@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Item 1",
+        "address": "17 Main St, Pinchinat",
+        "description": "A great place to visit for enjoying and making activities.",
+        "image": "images/item1.webp"
+    },
+    {
+        "name": "Item 2",
+        "address": "22 St Clervaux, Petion Ville",
+        "description": "Known for its beautiful jewls and cheap articles.",
+        "image": "images/item2.webp"
+    },
+    {
+        "name": "Item 3",
+        "address": "34 St Kenscoff, Furcy",
+        "description": "A popular spot for hiking and nature lovers.",
+        "image": "images/item3.webp"
+    },
+    {
+        "name": "Item 4",
+        "address": "20 St Louverture, Petion Ville",
+        "description": "Relax by the piscin and enjoy the beautiful foods.",
+        "image": "images/item4.webp"
+    },
+    {
+        "name": "Item 5",
+        "address": "20 St Metellus, Petion Ville",
+        "description": "A bustling downtown area with shopping and dining.",
+        "image": "images/item5.webp"
+    },
+    {
+        "name": "Item 6",
+        "address": "34 St Villate, Petion Ville",
+        "description": "Known for its wineries and scenic views.",
+        "image": "images/item6.webp"
+    },
+    {
+        "name": "Item 7",
+        "address": "40 Main St, Clervaux",
+        "description": "Historic buildings with museums and old arts.",
+        "image": "images/item7.webp"
+    },
+    {
+        "name": "Item 8",
+        "address": "50 Juvenat St, Debrosse",
+        "description": "A beach hotel with a cool atmosphere.",
+        "image": "images/item8.webp"
+    }
+]

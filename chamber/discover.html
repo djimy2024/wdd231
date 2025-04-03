@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/directory-large.css">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </head>
 
 <!-- Body -->
@@ -32,25 +32,23 @@
         <li class="current-menu-item"><a href="#" title="Home">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html" title="Service">Chamber</a></li>
-        <li><a href="join.html" title="History">About Us</a></li>
+        <li><a href="join.html" title="History">Join Us</a></li>
         </ul>
       </nav>
-<!-- Main -->
-    <main>
-       <h1>Home</h1>
-       <p>A company is a type of business structure that is a separate legal entity from its owners.</br>
-        It’s a complex business structure, with higher set-up and administrative costs because of extra reporting requirements and higher-level legal obligations. The structure, costs and legal obligations make a company structure better suited to a medium to large business.</p>
-    
-      <div class="layout-toggle">
-        <button id="gridView">Grid View</button>
-        <button id="listView">List View</button>
-    </div>
 
-    <section id="members"></section>
-    
+      <!-- Main -->
+      <main>
+        <div id="sidebar">
+            <p id="visitor-message"></p>
+        </div>
+
+        <section id="items-gallery">
+            <!-- Cards will be inserted here via JavaScript -->
+        </section>
     </main>
 
-<!-- Footer -->
+
+      <!-- Footer -->
     <footer>
         <p>&copy; <span id="currentyear"></span> Citadelle Chamber of Commerce</p>
         <p id="lastModified"></p>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Running Game</title>
+  <style>body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB; /* Sky blue background */
+  }
+  
+  #gameContainer {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    background-color: #000;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  #road {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #555; /* Road color */
+  }
+  
+  #car {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+  }
+  
+  #obstacle {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    background-color: green;
+    transform: translateX(-50%);
+  }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="car"></div>
+    <div id="road"></div>
+    <div id="obstacle"></div>
+  </div>
+
+  <script>// Getting references to the game elements
+    const car = document.getElementById('car');
+    const road = document.getElementById('road');
+    const obstacle = document.getElementById('obstacle');
+    
+    // Initial car position and speed settings
+    let carX = road.offsetWidth / 2 - car.offsetWidth / 2;
+    let carY = road.offsetHeight - car.offsetHeight - 10;
+    let carSpeed = 10;  // Controls how fast the car moves left/right
+    
+    // Setting the obstacle's speed
+    let obstacleSpeed = 5;
+    
+    // Car movement based on arrow keys
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && carX > 0) {
+        carX -= carSpeed;
+      } else if (e.key === 'ArrowRight' && carX < road.offsetWidth - car.offsetWidth) {
+        carX += carSpeed;
+      }
+      car.style.left = carX + 'px';
+    });
+    
+    // Function to generate and move obstacles
+    function moveObstacle() {
+      let obstacleX = Math.random() * (road.offsetWidth - obstacle.offsetWidth); // Randomize horizontal position
+      obstacle.style.left = obstacleX + 'px';
+      let obstacleY = -100;
+    
+      let interval = setInterval(() => {
+        obstacleY += obstacleSpeed; // Move the obstacle down
+        obstacle.style.top = obstacleY + 'px';
+    
+        // Collision detection
+        if (obstacleY + obstacle.offsetHeight >= carY && 
+            obstacleY <= carY + car.offsetHeight && 
+            obstacleX + obstacle.offsetWidth >= carX &&
+            obstacleX <= carX + car.offsetWidth) {
+          // Game over condition
+          alert('Game Over! Refresh to restart.');
+          clearInterval(interval);
+        }
+    
+        // Reset obstacle when it moves out of the screen
+        if (obstacleY > road.offsetHeight) {
+          obstacleY = -100;
+          obstacleX = Math.random() * (road.offsetWidth - obstacle.offsetWidth); // Randomize again
+          obstacle.style.left = obstacleX + 'px';
+        }
+      }, 1000 / 60); // Move the obstacle 60 times per second (60 FPS)
+    }
+    
+    // Start generating obstacles
+    setInterval(moveObstacle, 2000); // New obstacle every 2 seconds
+    </script>
+</body>
+</html>

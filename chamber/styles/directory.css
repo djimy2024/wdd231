@@ -174,9 +174,73 @@ ul.open.menulinks {
   font-size: 1.2rem;
 }
 
+#items-gallery {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  max-width: 300px; /* Ensures the image does not exceed 300px in width */
+  max-height: 200px; /* Ensures the image does not exceed 200px in height */
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.lazyload {
+  background-color: #f0f0f0; /* Light gray background while loading */
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.visitor-message {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.visitor-message p {
+  margin: 0;
+}
 
  /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+
+  #items-gallery {
+    grid-template-columns: 1fr;
+}
     #members {
         flex-direction: column;
         align-items: center;
@@ -194,4 +258,11 @@ ul.open.menulinks {
       padding: 10px;
   }
 }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  #items-gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 

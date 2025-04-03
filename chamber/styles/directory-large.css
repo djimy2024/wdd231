@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 1025px) {
     #myButton {
         display: none;
     }
@@ -19,4 +19,9 @@
    nav {
     display: block; /* Show the nav on screens 768px and larger */
 }
+
+#items-gallery {
+    grid-template-columns: repeat(4, 1fr);
 }
+}
+
