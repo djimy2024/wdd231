@@ -17,12 +17,10 @@ function getQueryParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const firstName = urlParams.get('first-name');
     const lastName = urlParams.get('last-name');
-    const organizationalTitle = urlParams.get('organizational-title');
     const email = urlParams.get('email');
     const phoneNumber = urlParams.get('phone');  
-    const business = urlParams.get('business');
     const membershipLevel = urlParams.get('membership-level');  
-    return { firstName, lastName, organizationalTitle, email, phoneNumber, business, membershipLevel };
+    return { firstName, lastName, email, phoneNumber, membershipLevel };
 }
 
 // Function to display form data
@@ -34,10 +32,8 @@ function displayFormData() {
     submittedDataElement.innerHTML = `
         <p><strong>First Name:</strong> ${data.firstName}</p>
         <p><strong>Last Name:</strong> ${data.lastName}</p>
-        <p><strong>Organizational Title:</strong> ${data.organizationalTitle}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Phone Number:</strong> ${data.phoneNumber}</p>
-        <p><strong>Business/Organization's Name:</strong> ${data.business}</p>
         <p><strong>Membership Level:</strong> ${data.membershipLevel}</p>
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
     `;

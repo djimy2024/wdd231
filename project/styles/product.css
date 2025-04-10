@@ -28,61 +28,53 @@
 }
 
 nav {
-    background-color: #2C6F2A;
-    grid-template-rows: 0fr;
-    
-  }
-
-  nav ul {overflow: hidden;}
-
-  nav.open {grid-template-rows: 1fr;}
-
-  #myButton {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    width: 100%;
-    text-align: right;
-    padding: 0.25rem 2vw;
-  }
-
-  ul.menulinks li a {
-    display: block;
-    padding: 0.75rem 2vw;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  li.current-menu-item a {
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  ul.menulinks {
-    display: none;
-    list-style-type: none;
+  background-color: #2C6F2A;
+  display: flex;
+  flex-direction: column;
 }
 
-ul.menulinks, ul.menulinks.open {
-    justify-content: none;
+nav ul {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* hidden on mobile by default */
+  flex-direction: column;
+}
+
+ul.menulinks li a {
+  display: block;
+  padding: 0.75rem 2vw;
+  color: #fff;
+  text-decoration: none;
+}
+
+li.current-menu-item a {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 ul.menulinks a:hover {
- background-color: #2C6F2A;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Toggle open state for mobile */
+ul.menulinks.open {
+  display: flex;
+}
 
-ul.open.menulinks {
- display: block;
+#myButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  padding: 0.25rem 2vw;
 }
 
 #myButton.open::before {
-    content: "✖";
-}
-
-.layout-toggle {
-    margin: 20px 0;
+  content: "✖";
 }
 
 #products {
@@ -132,31 +124,6 @@ ul.open.menulinks {
    padding: 1rem;
  }
 
- 
-
-.card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  max-width: 300px; /* Ensures the image does not exceed 300px in width */
-  max-height: 200px; /* Ensures the image does not exceed 200px in height */
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
 button {
   background-color: forestgreen;
   color: white;
@@ -169,31 +136,10 @@ button:hover {
   background-color: #555;
 }
 
-.lazyload {
-  background-color: #f0f0f0; /* Light gray background while loading */
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  max-height: 200px;
-}
-
-.visitor-message {
-  background-color: #f0f0f0;
+#cart {
+  width: 30%;
   padding: 20px;
   margin: 20px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.visitor-message p {
-  margin: 0;
-}
-
-#cart {
-  width: 300px;
-  padding: 20px;
   background-color: #f9f9f9;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -237,33 +183,25 @@ button:hover {
 
 
  /* Responsive design for smaller screens */
-@media (max-width: 640px) {
+ @media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;         /* Horizontal nav layout */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+  }
 
-  #items-gallery {
-    grid-template-columns: 1fr;
-}
-    #products {
-        flex-direction: column;
-        align-items: center;
-    }
-    header, footer, form {
-        text-align: center;
-        align-items: center;
-      }
+  #myButton {
+    display: none;               /* Hide menu button */
+  }
 
-    .product-card {
-        width: 80%;
-    }
+  ul.menulinks {
+    display: flex !important;    /* Always show menu */
+    flex-direction: row;
+    margin-left: auto;           /* Push menu to the right */
+  }
 
-    body {
-      padding: 10px;
+  ul.menulinks li a {
+    padding: 1rem;
   }
 }
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  #items-gallery {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
