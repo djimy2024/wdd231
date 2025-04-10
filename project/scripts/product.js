@@ -13,78 +13,81 @@ hamburgerElement.addEventListener('click', () =>{
     hamburgerElement.classList.toggle('open');
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Sample data for products (could be fetched from an API)
-    const products = [
-      { id: 1, name: "Organic Apples", description: "Fresh, sweet organic apples grown locally.", price: "$5.99", image: "apple.jpg" },
-      { id: 2, name: "Organic Carrots", description: "Crisp and nutritious organic carrots.", price: "$3.49", image: "carrot.jpg" },
-      { id: 3, name: "Organic Bananas", description: "Sweet and fresh organic bananas.", price: "$4.99", image: "banana.jpg" },
-      // More products can be added here
-    ];
-  
-    const productList = document.getElementById('product-list');
-  
-    products.forEach(product => {
+async function fetchProducts() {
+  const response = await fetch('data/product.json');
+  const products = await response.json();
+
+  // Log the members to the console
+  console.log(products);
+
+  displayProducts(products);
+}
+
+function displayProducts(products) {
+  const productsContainer = document.getElementById('products');
+  productsContainer.innerHTML = '';  // Clear the container
+
+  products.forEach(product => {
       const productCard = document.createElement('div');
       productCard.classList.add('product-card');
       productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-img">
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <p><strong>${product.price}</strong></p>
-        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-      `;
-      productList.appendChild(productCard);
-    });
-  
-    // Handle add-to-cart functionality
-    const cartButtons = document.querySelectorAll('.add-to-cart');
-    cartButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const productId = this.getAttribute('data-id');
-        alert(`Product ID ${productId} added to cart.`);
-        // Here you would add the product to localStorage or sessionStorage for the cart
-      });
-    });
+           <img src="images/${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <p><strong>Price</strong>:  ${product.price}</p>
+          <p><strong>Category</strong>:  ${product.category}</p> 
+          <p><strong>Availability</strong>:  ${product.availability}</p> 
+          <p><strong>Rating</strong>:  ${product.rating}</p>
+           <button onclick="buyNow('${product.name}--->${product.price}')">Buy Now</button>`;
+      productsContainer.appendChild(productCard);
   });
-  
+}
+window.onload = fetchProducts;
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
-        const productList = document.getElementById('product-list');
-  
-        // Loop through each product in the JSON data and create HTML elements
-        data.forEach(product => {
-          const productCard = document.createElement('div');
-          productCard.classList.add('product-card');
-          productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-img">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p><strong>${product.price}</strong></p>
-            <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-            <p><small>Rating: ${product.rating} / 5</small></p>
-            <ul>
-              ${product.features.map(feature => `<li>${feature}</li>`).join('')}
-            </ul>
-          `;
-          productList.appendChild(productCard);
-        });
-  
-        // Handle add-to-cart functionality
-        const cartButtons = document.querySelectorAll('.add-to-cart');
-        cartButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const productId = this.getAttribute('data-id');
-            alert(`Product ID ${productId} added to cart.`);
-            // Here you would add the product to localStorage or sessionStorage for the cart
-          });
-        });
-      })
-      .catch(error => {
-        console.error('Error loading product data:', error);
-      });
+let cart = [];
+function buyNow(productName) {
+  const product = {
+    name: productName,
+    quantity: 1
+  };
+
+  // Check if it's already in the cart
+  const existingProduct = cart.find(p => p.name === product.name);
+
+  if (existingProduct) {
+    existingProduct.quantity++;
+  } else {
+    cart.push(product);
+  }
+
+  alert(`${productName} added to cart!`);
+  console.log(cart);  // You can remove this or use it for debugging
+  updateCartDisplay(); // Optional function to show the cart
+}
+function updateCartDisplay() {
+  const cartItemsElement = document.getElementById('cartItems');
+  cartItemsElement.innerHTML = ''; // Clear the list first
+
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} (x${item.quantity})`;
+    cartItemsElement.appendChild(li);
   });
-  
+}
+
+function updateCartDisplay() {
+  const cartItemsElement = document.getElementById('cartItems');
+  const cartTotalElement = document.getElementById('cartTotal');
+  cartItemsElement.innerHTML = ''; // Clear the list first
+
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} (x${item.quantity})`;
+    cartItemsElement.appendChild(li);
+    totalItems += item.quantity;
+  });
+
+  cartTotalElement.textContent = `Total Items: ${totalItems}`;
+}

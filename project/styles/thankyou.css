@@ -1,0 +1,130 @@
+ /* Global Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Footer Styling */
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: forestgreen;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    }
+
+nav {
+    background-color:  #2C6F2A;
+    grid-template-rows: 0fr;
+    
+    }
+    
+    nav ul {overflow: hidden;}
+    
+    nav.open {grid-template-rows: 1fr;}
+    
+    #myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 0.25rem 2vw;
+    }
+    
+    ul.menulinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    li.current-menu-item a {
+    background-color: rgba(0,0,0,0.2);
+    }
+    
+    ul.menulinks {
+    display: none;
+    list-style-type: none;
+    }
+    
+    ul.menulinks, ul.menulinks.open {
+    justify-content: none;
+    }
+    
+    ul.menulinks a:hover {
+    background-color: rgba(255,255,255,0.2);
+    }
+    
+    
+    ul.open.menulinks {
+    display: block;
+    }
+    
+    #myButton.open::before {
+    content: "✖";
+    }
+    
+    .layout-toggle {
+    margin: 20px 0;
+    }
+/* Flexbox centering for the content */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.thankyou-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    color:  #2C6F2A;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+footer{
+    background-color:  #2C6F2A;
+    display: grid;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  

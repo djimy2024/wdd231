@@ -4,61 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directory of local Chamber of Commerce of Citadelle">
+    <meta name="description" content="Directory of Organic Grocery Store Page">
     <meta name="author" content="Djimy Francillon">
-    <meta property="og:title" content="Chamber of Commerce of Citadelle">
+    <meta property="og:title" content="Organic Grocery Store Page">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png"> 
+    <meta property="og:image" content="images/favicon.webp"> 
     <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/logo.png "> 
-    <title>Organic Grocery Store</title>
-  <link rel="stylesheet" href="styles/index.css">
-  <link rel="icon" href="images/favicon.webp" />
-    <script src="scripts/index.js" defer></script>
+    <title>Organic Grocery Store Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/test.js" defer></script>
 </head>
 
 <!-- Body -->
 <body>
     <!-- Header -->
     <header>
-       <span><h1>Welcome to Organic Grocery Store</h1></span>
+        <img src="images/favicon.webp" width="34" height="40">
+       <span>Home</span>
+       <button id="myButton">&#9776;</button>
       </header>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="product.html">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="menulinks">
+        <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+        <li><a href="product.html">Produts</a></li>
+        <li><a href="join.html" title="Service">Join Us</a></li>
+        <li><a href="thankyou.html" title="History">Thank You</a></li>
         </ul>
       </nav>
-      
-
-  
-  <main>
+<!-- Main -->
+    <main>
+      <section class="featured-products">
+        <a href="product.html" class="cta-button">Shop Now</a>
+        </section><br>
+        <section><img src="images/favicon.webp" width="440" height="500"></section>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="/project/images/apple.webp" alt="Organic Apples" class="product-img">
+            <h3>Organic Apples</h3>
+            <p>Fresh, sweet organic apples grown locally.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <div class="product-card">
+            <img src="/project/images/carrot.webp" alt="Organic Carrots" class="product-img">
+            <h3>Organic Carrots</h3>
+            <p>Crisp and nutritious organic carrots.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <div class="product-card">
+            <img src="/project/images/avocado.webp" alt="Organic Avocados" class="product-img">
+            <h3>Organic Avocados</h3>
+            <p>Its texture is creamy with a fresh flavor full of exoticism.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <div class="product-card">
+            <img src="/project/images/tomato.webp" alt="Organic Tomatoes" class="product-img">
+            <h3>Organic Tomatoes</h3>
+            <p>A fresh organic tomato, supple in the hands, its consistency is firm and dense.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <div class="product-card">
+            <img src="/project/images/militon.webp" alt="Organic Mirlitons" class="product-img">
+            <h3>Organic Mirlitons</h3>
+            <p>Mirliton is a tuberous perennial plant with long creeping stems adorned with tendrils.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <div class="product-card">
+            <img src="/project/images/lemon.webp" alt="Organic Lemons" class="product-img">
+            <h3>Organic Lemons</h3>
+            <p>Lemon is a very juicy fruit with a strong tangy taste.</p>
+            <button class="details-button">View Details</button>
+          </div>
+          <!-- More featured products can go here -->
+        </div>
+      </section>
     
-    <section class="featured-products">
-      <a href="product.html" class="cta-button">Shop Now</a>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="/project/images/banana.jpeg" alt="Organic Apples" class="product-img">
-          <h3>Organic Apples</h3>
-          <p>Fresh, sweet organic apples grown locally.</p>
-          <button class="details-button">View Details</button>
-        </div>
-        <div class="product-card">
-          <img src="/project/images/banana.jpeg" alt="Organic Carrots" class="product-img">
-          <h3>Organic Carrots</h3>
-          <p>Crisp and nutritious organic carrots.</p>
-          <button class="details-button">View Details</button>
-        </div>
-        <!-- More featured products can go here -->
-      </div>
-    </section>
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Organic Grocery Store | All Rights Reserved</p>
-  </footer>
-
+<!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Organic Grocery Store</p>
+        <p id="lastModified"></p>
+        <p>WDD 231 - Djimy Francillon</p>
+    </footer>
 </body>
 </html>

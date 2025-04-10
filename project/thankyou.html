@@ -11,10 +11,10 @@
     <meta property="og:image" content="images/favicon.webp"> 
     <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/logo.png "> 
-    <title>Organic Grocery Store</title>
+    <title>Thank you Page</title>
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/product.css">
-    <script src="scripts/product.js" defer></script>
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <!-- Body -->
@@ -22,7 +22,7 @@
     <!-- Header -->
     <header>
         <img src="images/favicon.webp" width="34" height="40">
-       <span>Our Products</span>
+       <span>Thank You Page</span>
        <button id="myButton">&#9776;</button>
       </header>
       <nav>
@@ -35,14 +35,16 @@
       </nav>
 <!-- Main -->
     <main>
-        <div id="cart">
-            <h2>Shopping Cart</h2>
-            <p id="cartTotal">Total Items: 0</p>
-            <ul id="cartItems"></ul>
-          </div>          
-          
-    <section id="products"></section>
-    
+      <div class="content-wrapper">
+        <div class="thankyou-container">
+            <h2>Thank You for Joining Us!</h2>
+            <p>Your submission has been received. Here's the information you provided:</p>
+
+            <div class="info" id="submitted-data">
+                <!-- This section will display the form data -->
+            </div>
+        </div>
+    </div>
     </main>
 
 <!-- Footer -->

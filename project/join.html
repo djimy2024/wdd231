@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of Organic Grocery Store Page">
+    <meta name="author" content="Djimy Francillon">
+    <meta property="og:title" content="Organic Grocery Store Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/favicon.webp"> 
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="images/logo.png "> 
+    <title>Organic Grocery Store Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/test.js" defer></script>
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/favicon.webp" width="34" height="40">
+       <span>Join Us</span>
+       <button id="myButton">&#9776;</button>
+      </header>
+      <nav>
+        <ul class="menulinks">
+        <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+        <li><a href="product.html">Produts</a></li>
+        <li><a href="join.html" title="Service">Join Us</a></li>
+        <li><a href="thankyou.html" title="History">Thank You</a></li>
+        </ul>
+      </nav>
+<!-- Main -->
+ <main>
+
+<div class="form-container">
+    <h2>Join Our Membership</h2>
+    <form action="thankyou.html" method="get">
+        <!-- First Name -->
+        <label for="first-name">First Name
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="First Name" placeholder="Djimy">
+        </label>
+
+        <!-- Last Name -->
+        <label for="last-name">Last Name
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Last Name" placeholder="Francillon">
+        </label>
+
+         <!-- Organizational Title -->
+         <label for="organizational-title">Organizational Title</label>
+            <input type="text" id="organizational-title" name="organizational-title" required title="Organizational Title" placeholder="N@t-ca$H" pattern="^[A-Za-z\s-]{7,}$" aria-label="Organizational Title (min. 7 characters, letters, hyphens, and spaces only)">
+        
+
+        <!-- Email -->
+        <label for="email">Email
+            <input type="email" id="email" name="email" required autocomplete="email" title="Email" placeholder="djimyf@gmail.com">
+        </label>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" title="Phone">
+        
+
+         <!-- Business -->
+         <label for="business">Business/Organization's Name</label>
+            <input type="text" id="business" name="business" title="Business">
+
+          <!-- Level -->
+          <label for="level">Membership Level</label>
+    <select id="level" name="membership-level" required>
+        <option value="" disabled selected>Select a Membership Level</option>
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+    </select>
+        
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</div>
+
+<!-- Cards Section -->
+<div class="card-container">
+    <div class="card" id="card1">
+        <h3>NP Membership</h3>
+        <p>No Fee</p>
+        <button onclick="openModal('modal1')">Learn More</button>
+    </div>
+    <div class="card" id="card2">
+        <h3>Bronze Membership</h3>
+        <p>$100/year</p>
+        <button onclick="openModal('modal2')">Learn More</button>
+    </div>
+    <div class="card" id="card3">
+        <h3>Silver Membership</h3>
+        <p>$250/year</p>
+        <button onclick="openModal('modal3')">Learn More</button>
+    </div>
+    <div class="card" id="card4">
+        <h3>Gold Membership</h3>
+        <p>$500/year</p>
+        <button onclick="openModal('modal4')">Learn More</button>
+    </div>
+</div>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Special events, advertising, and networking opportunities at no cost!</p>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Special events, limited advertising, and networking opportunities for $100/year.</p>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Special events, priority advertising, and event discounts for $250/year.</p>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>Special events, premium advertising, and exclusive benefits for $500/year.</p>
+    </div>
+</div>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; <span id="currentyear"></span> Organic Grocery Store</p>
+    <p id="lastModified"></p>
+    <p>WDD 231 - Djimy Francillon</p>
+</footer>
+</body>
+</html>

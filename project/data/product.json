@@ -1,78 +1,137 @@
 [
-    {
-      "id": 1,
-      "name": "Organic Apples",
-      "description": "Fresh, sweet organic apples grown locally. Ideal for snacking or baking.",
-      "price": "$5.99",
-      "category": "Fruit",
-      "image": "apple.jpg",
-      "availability": "In Stock",
-      "rating": 4.5,
-      "features": [
-        "Rich in Vitamin C",
-        "Non-GMO",
-        "Locally sourced"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Organic Carrots",
-      "description": "Crisp and nutritious organic carrots. Great for salads or stews.",
-      "price": "$3.49",
-      "category": "Vegetables",
-      "image": "carrot.jpg",
-      "availability": "In Stock",
-      "rating": 4.7,
-      "features": [
-        "High in Beta-carotene",
-        "Non-GMO",
-        "No pesticides"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Organic Bananas",
-      "description": "Sweet and fresh organic bananas. Perfect for smoothies or a healthy snack.",
-      "price": "$4.99",
-      "category": "Fruit",
-      "image": "banana.jpg",
-      "availability": "Out of Stock",
-      "rating": 4.3,
-      "features": [
-        "Rich in Potassium",
-        "Non-GMO",
-        "Fair Trade Certified"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Organic Spinach",
-      "description": "Fresh organic spinach, great for salads, smoothies, or cooking.",
-      "price": "$2.99",
-      "category": "Vegetables",
-      "image": "spinach.jpg",
-      "availability": "In Stock",
-      "rating": 4.8,
-      "features": [
-        "High in Iron",
-        "Non-GMO",
-        "Locally sourced"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Organic Almond Butter",
-      "description": "Creamy and smooth organic almond butter, perfect for spreads or snacks.",
-      "price": "$7.99",
-      "category": "Pantry",
-      "image": "almond-butter.jpg",
-      "availability": "In Stock",
-      "rating": 4.9,
-      "features": [
-        "No added sugar",
-        "Non-GMO",
-        "Rich in healthy fats"
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Organic Apples",
+    "description": "Fresh, sweet organic apples grown locally. Ideal for snacking or baking.",
+    "price": "$5.99",
+    "category": "Fruit",
+    "image": "apple.webp",
+    "availability": "In Stock",
+    "rating": 4.5,
+    "features": [
+      "Rich in Vitamin C",
+      "Non-GMO",
+      "Locally sourced"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Organic Carrots",
+    "description": "Crisp and nutritious organic carrots. Great for salads or stews.",
+    "price": "$3.49",
+    "category": "Vegetables",
+    "image": "carrot.webp",
+    "availability": "In Stock",
+    "rating": 4.7,
+    "features": [
+      "High in Beta-carotene",
+      "Non-GMO",
+      "No pesticides"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Organic Avocados",
+    "description": "Its texture is creamy with a fresh flavor full of exoticism.",
+    "price": "$4.99",
+    "category": "Fruit",
+    "image": "avocado.webp",
+    "availability": "Out of Stock",
+    "rating": 4.3,
+    "features": [
+      "Rich in Potassium",
+      "Non-GMO",
+      "Fair Trade Certified"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Organic Tomatos",
+    "description": "Fresh organic tomato, great for salads, smoothies, or cooking.",
+    "price": "$2.99",
+    "category": "Vegetables",
+    "image": "tomato.webp",
+    "availability": "In Stock",
+    "rating": 4.8,
+    "features": [
+      "High in Iron",
+      "Non-GMO",
+      "Locally sourced"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Organic Chayote",
+    "description": "Mirliton is a tuberous perennial plant with long creeping stems adorned with tendrils.",
+    "price": "$7.99",
+    "category": "Vegetables",
+    "image": "mirliton.webp",
+    "availability": "In Stock",
+    "rating": 4.9,
+    "features": [
+      "No added sugar",
+      "Non-GMO",
+      "Rich in healthy fats"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Lemon",
+    "description": "Lemon is a very juicy fruit with a strong tangy taste.",
+    "price": "$1.99",
+    "category": "Fruit",
+    "image": "lemon.webp",
+    "availability": "In Stock",
+    "rating": 4.9,
+    "features": [
+      "No added sugar",
+      "Non-GMO",
+      "Rich in healthy fats"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Patate",
+    "description": "Perennial by its tubers which are underground stems, swollen with nutritive matter, and provided with buds.",
+    "price": "$3.29",
+    "category": "Fruit",
+    "image": "patate.webp",
+    "availability": "In Stock",
+    "rating": 4.9,
+    "features": [
+      "No added sugar",
+      "Non-GMO",
+      "Rich in healthy fats"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Pepper",
+    "description": "Significant analgesic properties, due to its capsaicin with anti-inflammatory properties.",
+    "price": "$0.99",
+    "category": "Fruit",
+    "image": "pepper.webp",
+    "availability": "In Stock",
+    "rating": 4.9,
+    "features": [
+      "No added sugar",
+      "Non-GMO",
+      "Rich in healthy fats"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Banana",
+    "description": "Smooth, sweet, floury, and offers a flavor mixed with those of the Bon Chrétien pear and the Reinette apple.",
+    "price": "$2.99",
+    "category": "Fruit",
+    "image": "banana.webp",
+    "availability": "In Stock",
+    "rating": 4.9,
+    "features": [
+      "No added sugar",
+      "Non-GMO",
+      "Rich in healthy fats"
+    ]
+  }
+]

@@ -2,53 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  align-items: center;
   text-align: center;
+  align-items: center;
     
 }
 
-/* Remove default list styles */
-nav ul {
-  list-style-type: none;  /* Removes bullets */
-  padding: 10px;  /* Removes padding */
-  margin: 0;  /* Removes margin */
-  background-color: #2C6F2A;
-  text-align: right;
-}
-
-/* Display the list items horizontally */
-nav ul li {
-  display: inline-block;  /* Makes each item display horizontally */
-  margin-right: 20px;  /* Adds space between the items */
-}
-
-/* Style the links */
-nav ul li a {
-  text-decoration: none;  /* Removes underlines */
-  color: white;  /* Sets the text color */
-  font-size: 16px;  /* Adjust the font size */
-}
-
 body {
-  font-family: Arial, sans-serif;
-  align-items: center;
-  text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f9; /* Light background */
+    color: #333333; /* Dark text color for readability */
+    line-height: 1.6;
+    
 }
 
 header {
-  background-color:forestgreen;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: 44px auto 44px;
+  align-items: end;
+  background-color: forestgreen;
+  justify-content: space-around;
+  color: white;
   text-align: center;
-  color: #ecf0f1;
-  align-items: center;
-  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 nav {
-  background-color: white;
+  background-color: #2C6F2A;
   grid-template-rows: 0fr;
-  align-items: center;
-  text-align: center;
   
 }
 
@@ -67,33 +48,32 @@ nav.open {grid-template-rows: 1fr;}
   padding: 0.25rem 2vw;
 }
 
-ul.menu li a {
-  display: grid;
+ul.menulinks li a {
+  display: block;
   padding: 0.75rem 2vw;
-  color: black;
+  color: #fff;
   text-decoration: none;
-  background-color: #f39c12;
 }
 
 li.current-menu-item a {
   background-color: rgba(0,0,0,0.2);
 }
 
-ul.menu {
-  display: flex;
+ul.menulinks {
+  display: none;
   list-style-type: none;
 }
 
-ul.menu, ul.menu.open {
+ul.menulinks, ul.menulinks.open {
   justify-content: none;
 }
 
-ul.menu a:hover {
+ul.menulinks a:hover {
 background-color: rgba(255,255,255,0.2);
 }
 
 
-ul.open.menu {
+ul.open.menulinks {
 display: block;
 }
 
@@ -103,18 +83,6 @@ display: block;
 
 .layout-toggle {
   margin: 20px 0;
-}
-
-/* Footer */  
-.hero {
-  text-align: center;
-  background-color: #f39c12;
-  padding: 50px 20px;
-}
-
-.hero h1 {
-  color: white;
-  font-size: 2.5em;
 }
 
 .cta-button {
@@ -143,12 +111,14 @@ display: block;
   background-color: #ecf0f1;
   padding: 15px;
   border-radius: 8px;
+  align-items: center;
 }
 
 .product-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  align-items: center;
 }
 
 .product-card h3 {
@@ -156,7 +126,7 @@ display: block;
 }
 
 .product-card .details-button {
-  background-color: #3498db;
+  background-color: #2C6F2A;
   color: white;
   padding: 10px;
   border: none;
@@ -165,9 +135,186 @@ display: block;
 }
 
 
-footer {
-  background-color:#2C6F2A;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+
+#members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
 }
+
+.member-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 30px #333;
+}
+
+.member-card img {
+  width: 100%;
+  height: auto;
+}
+
+.member-card h3 {
+  margin-top: 10px;
+}
+
+.member-card a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2C6F2A;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+/* Footer */  
+footer{
+ background-color: #2C6F2A;
+ display: grid;
+ text-align: center;
+ color: #fff;
+ font-size: 1rem;
+ padding: 1rem;
+}
+
+#hero {
+  text-align: center;
+}
+
+#events ul {
+  list-style-type: none;
+}
+
+#spotlights .spotlight-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+ 
+}
+
+/* Current Event Section */
+.current-events {
+background-color: #f4f4f4;
+padding: 2rem;
+margin: 10px;
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 0 30px #333;
+}
+
+/* Weather Section */
+.weather {
+background-color: #e0f7fa;
+padding: 2rem;
+border: 1px solid #ddd;
+border-radius: 8px;
+margin: 10px;
+box-shadow: 0 0 30px #333;
+}
+
+.weather p {
+text-align: center;
+font-size: 1.2rem;
+}
+
+#items-gallery {
+width: 100%;
+display: grid;
+gap: 20px;
+padding: 20px;
+}
+
+.card {
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 20px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+width: 100%;
+height: auto;
+transition: transform 0.3s ease;
+max-width: 300px; /* Ensures the image does not exceed 300px in width */
+max-height: 200px; /* Ensures the image does not exceed 200px in height */
+}
+
+.card:hover img {
+transform: scale(1.05);
+}
+
+button {
+background-color: #333;
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #555;
+}
+
+.lazyload {
+background-color: #f0f0f0; /* Light gray background while loading */
+display: block;
+width: 100%;
+height: auto;
+max-width: 300px;
+max-height: 200px;
+}
+
+.visitor-message {
+background-color: #f0f0f0;
+padding: 20px;
+margin: 20px;
+border-radius: 5px;
+font-size: 1.2em;
+text-align: center;
+}
+
+.visitor-message p {
+margin: 0;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 640px) {
+
+#items-gallery {
+  grid-template-columns: 1fr;
+}
+  #members {
+      flex-direction: column;
+      align-items: center;
+  }
+  header, footer, form {
+      text-align: center;
+      align-items: center;
+    }
+
+  .member-card {
+      width: 80%;
+  }
+
+  body {
+    padding: 10px;
+}
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+#items-gallery {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+
