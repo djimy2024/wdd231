@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Roboto', serif;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -27,55 +27,56 @@ header {
     width: 100%;
     }
 
-    nav {
-        background-color: #2C6F2A;
-        display: flex;
-        flex-direction: column;
-      }
+nav {
+  background-color: #2C6F2A;
+  display: flex;
+  flex-direction: column;
+  }
       
-      nav ul {
-        overflow: hidden;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: none; /* hidden on mobile by default */
-        flex-direction: column;
-      }
+nav ul {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* hidden on mobile by default */
+  flex-direction: column;
+  }
       
-      ul.menulinks li a {
-        display: block;
-        padding: 0.75rem 2vw;
-        color: #fff;
-        text-decoration: none;
-      }
+ul.menulinks li a {
+  display: block;
+  padding: 0.75rem 2vw;
+  color: #fff;
+  text-decoration: none;
+ }
       
-      li.current-menu-item a {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
+li.current-menu-item a {
+  background-color: rgba(0, 0, 0, 0.2);
+  }
       
-      ul.menulinks a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
+ul.menulinks a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  }
       
-      /* Toggle open state for mobile */
-      ul.menulinks.open {
-        display: flex;
-      }
+ /* Toggle open state for mobile */
+ul.menulinks.open {
+  display: flex;
+  }
       
-      #myButton {
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        width: 100%;
-        text-align: right;
-        padding: 0.25rem 2vw;
-      }
+#myButton {
+  font-family: 'Roboto', serif;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  padding: 0.25rem 2vw;
+  }
       
-      #myButton.open::before {
-        content: "✖";
-      }
+#myButton.open::before {
+  content: "✖";
+  }
 
 /* Flexbox centering for the content */
 .content-wrapper {
@@ -100,6 +101,9 @@ header {
 
 h2 {
     color:  #2C6F2A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* 700 is 'Bold' in Roboto */
+    font-size: 24px;
 }
 
 .info {

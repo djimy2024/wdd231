@@ -91,3 +91,4 @@ function updateCartDisplay() {
 
   cartTotalElement.textContent = `Total Items: ${totalItems}`;
 }
+

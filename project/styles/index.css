@@ -2,16 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
-  align-items: center;
-    
+  
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', serif;
     background-color: #f4f4f9; /* Light background */
     color: #333333; /* Dark text color for readability */
     line-height: 1.6;
+    text-align: center;
+    align-items: center; 
     
 }
 
@@ -25,6 +25,12 @@ header {
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* 700 is 'Bold' in Roboto */
+  font-size: 24px;
 }
 
 nav {
@@ -63,6 +69,7 @@ ul.menulinks.open {
 }
 
 #myButton {
+  font-family: 'Roboto', serif;
   font-size: 2rem;
   background: none;
   border: none;
@@ -78,6 +85,7 @@ ul.menulinks.open {
 }
 
 .cta-button {
+  font-family: 'Roboto', serif;
   background-color: forestgreen;
   color: white;
   padding: 15px;
@@ -92,39 +100,15 @@ ul.menulinks.open {
   text-align: center;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.product-card {
-  background-color: #ecf0f1;
-  padding: 15px;
-  border-radius: 8px;
-  align-items: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  align-items: center;
-}
-
-.product-card h3 {
-  margin-top: 10px;
-}
-
 .product-card .details-button {
   background-color: #2C6F2A;
   color: white;
-  padding: 10px;
+  padding: 100px;
   border: none;
   cursor: pointer;
   margin-top: 10px;
 }
+
 
 /* Footer */  
 footer{
@@ -138,7 +122,7 @@ footer{
 
 
 /* Responsive design for smaller screens */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 740px) {
   nav {
     flex-direction: row;         /* Horizontal nav layout */
     align-items: center;
@@ -159,6 +143,8 @@ footer{
   ul.menulinks li a {
     padding: 1rem;
   }
+
 }
+
 
 

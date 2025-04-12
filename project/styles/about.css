@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: 'Roboto', serif;
+      background-color: #f4f4f9; /* Light background */
+      color: #333333; /* Dark text color for readability */
+      line-height: 1.6;
+      text-align: center;
+      align-items: center; 
+      
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: forestgreen;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  h3 {
+    color:  #2C6F2A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* 700 is 'Bold' in Roboto */
+    font-size: 24px;
+  }
+  
+  nav {
+    background-color: #2C6F2A;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* hidden on mobile by default */
+    flex-direction: column;
+  }
+  
+  ul.menulinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  li.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  ul.menulinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Toggle open state for mobile */
+  ul.menulinks.open {
+    display: flex;
+  }
+  
+  #myButton {
+    font-family: 'Roboto', serif;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 0.25rem 2vw;
+  }
+  
+  #myButton.open::before {
+    content: "✖";
+  }
+  
+  
+  section {
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* 400 is 'Regular' in Roboto */
+    font-size: 16px;
+  }
+  
+  /* Footer */  
+  footer{
+   background-color: #2C6F2A;
+   display: grid;
+   text-align: center;
+   color: #fff;
+   font-size: 1rem;
+   padding: 1rem;
+  }
+  
+  
+  /* Responsive design for smaller screens */
+  @media screen and (min-width: 740px) {
+    nav {
+      flex-direction: row;         /* Horizontal nav layout */
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2vw;
+    }
+  
+    #myButton {
+      display: none;               /* Hide menu button */
+    }
+  
+    ul.menulinks {
+      display: flex !important;    /* Always show menu */
+      flex-direction: row;
+      margin-left: auto;           /* Push menu to the right */
+    }
+  
+    ul.menulinks li a {
+      padding: 1rem;
+    }
+  
+  }
+  
+  
+  
+  
